@@ -25,7 +25,20 @@ The tool streamlines and accelerates everyday FPS Creator development workflows 
 
 ## Key Features
 
+### 🪟 Floating Toolbar & Mini-Widget
+![Toolbar Overview](docs/infographics/toolbar_overview.png)
+
+- **Always-on-Top**: Stays above your workspace, by default in bottom-right corner of your screen.
+- **Folding and unfolding**: Pressing `🗕` collapses the toolbar into a mini button; clicking to expand returns the toolbar.
+- **Real-Time Engine LED Indicator**: An active visual indicator tracks whether FPS Creator processes are running or stopped.
+- **System Tray Integration**: Full background presence with tray menu and native toast notifications.
+- **English and Russian localization**: Both languages available.
+
+---
+
 ### 1. On-the-Fly Lightmapping Profiles
+![Lightmapping Profiles](docs/infographics/mode_lightmapping.png)
+
 Switch between 5 tuned lightmapping profiles via a single click with instant `setup.ini` updates and automatic engine reload:
 | Profile | `lightmapping` | `lightmaptexsize` | `lightmapquality` | `lightao` | Description |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -37,24 +50,26 @@ Switch between 5 tuned lightmapping profiles via a single click with instant `se
 
 *All profile values can be customized to your preference in the Settings dialog (`⚙`).*
 
+---
+
 ### 2. Fast Cache Cleaner
+![Cache Cleaner](docs/infographics/mode_cleaner.png)
+
 1. **`.bin and .dbo`**: Fast recursive deletion of cached models and segment binaries throughout `Files/`.
 2. **`Level Build Data`**: Removes intermediate build files (`.dbo`, `.ele`, `.lgt`, `.dat`) from `Files/levelbank/testlevel/` and `lightmaps/`.
 3. **`All`**: One-click deep purge combining `.bin`/`.dbo`, level build data, and lightmap textures.
 4. **`Engine Temp Cache (%TEMP%/dbpdata*)`**: Safely clears leftover DarkBASIC Professional engine runtime directories.
 
+---
+
 ### 3. Level Stash System with Map (`.fpm`) Preservation
-** WARNING! This thing is not even close to be stable, use at your own risk!**
+![Level Stash](docs/infographics/mode_stash.png)
+
+> ⚠️ **WARNING**: This feature is experimental, use at your own risk!
+
 - **Automatic Map Detection**: Queries the FPS Creator editor window title via Win32 API (`FPS Creator - [mapbank\level1.fpm]`) to archive the corresponding source `.fpm` alongside the compiled `testlevel` contents.
 - **Quick Stash & Quick Restore**: Save and revert snapshots in a single click.
 - **Visual Stash Manager**: Tabular view displaying snapshot dates, sizes, file counts, and associated map paths.
-
-### Floating Toolbar & Mini-Widget
-- **Always-on-Top**: Stays above your workspace, by default in bottom-right corner of your screen.
-- **Folding and unfolding**: Pressing `🗕` collapses the toolbar into a mini button; clicking to expand returns the toolbar.
-- **Real-Time Engine LED Indicator**: An active visual indicator tracks whether FPS Creator processes are running or stopped.
-- **System Tray Integration**: Full background presence with tray menu and native toast notifications.
-- **English and Russian localization**: Both languages availible.
 
 ---
 
