@@ -292,6 +292,29 @@ CleanResult FastCleaner::cleanLevelBuildData(const QString &fpscDir)
         }
     }
 
+    // Delete specific gridedit files
+    QStringList gridEditFiles = {"temp.fpm", "cfg.cfg"};
+    for (const QString &fileName : gridEditFiles) {
+        QString filePath = rootDir.filePath("Files/editors/gridedit/" + fileName);
+        if (!QFile::exists(filePath)) {
+            filePath = rootDir.filePath("editors/gridedit/" + fileName);
+        }
+        if (QFile::exists(filePath)) {
+            qint64 size = QFileInfo(filePath).size();
+#ifdef Q_OS_WIN
+            if (DeleteFileW(reinterpret_cast<LPCWSTR>(filePath.utf16())) || QFile::remove(filePath)) {
+                result.filesDeleted++;
+                result.bytesFreed += size;
+            }
+#else
+            if (QFile::remove(filePath)) {
+                result.filesDeleted++;
+                result.bytesFreed += size;
+            }
+#endif
+        }
+    }
+
     result.elapsedMs = timer.elapsed();
     return result;
 }

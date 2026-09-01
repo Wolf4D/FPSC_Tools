@@ -173,7 +173,7 @@ def generate_mode_lightmapping():
 def generate_mode_cleaner():
     items3 = [
         (113.5, COL_ORANGE, '.bin / .dbo', 'Files/**/*.bin, .dbo', 'Deletes compiled meshes & segment binaries.'),
-        (141.5, COL_AMBER,  'Level Build', 'levelbank/testlevel/', 'Purges intermediate build & lightmap files.'),
+        (141.5, COL_AMBER,  'Level Build', 'testlevel/, temp.fpm, cfg.cfg', 'Purges build files, lightmaps & gridedit temps.'),
         (168,   COL_RED,    'All (Deep)', 'Full Cache Purge', 'Complete cleanup of models, build data, lightmaps.'),
         (205,   COL_BLUE,   'Temp Cache', '%TEMP%/dbpdata*', 'Frees DarkBASIC temporary runtime folders.'),
     ]
