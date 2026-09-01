@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file>app.png</file>
+    <file>app.ico</file>
+    <file>translations/fpsc_tool_ru.qm</file>
+</qresource>
+</RCC>

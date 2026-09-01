@@ -1,0 +1,46 @@
+﻿# Build and compilation output directories
+build/
+build-*/
+build-release/
+build-debug/
+release/
+debug/
+
+# Distribution and binary artifacts
+dist/
+bin/
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+
+# Qt auto-generated files (moc, rcc, uic, compiled translations)
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+
+# Qt Creator / Visual Studio / IDE configurations
+*.pro.user
+*.pro.user.*
+*.stash
+.qmake.stash
+.vscode/
+.vs/
+*.suo
+*.user
+*.ncb
+*.pdb
+
+# Local application settings and stashes
+fpsc_tool.ini
+stashes/
+*.log
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store

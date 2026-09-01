@@ -1,0 +1,35 @@
+#include <windows.h>
+
+IDI_ICON1 ICON "../app.ico"
+
+IDR_PAYLOAD BIN_DATA "payload.bin"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0x0L
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Madness Studio\0"
+            VALUE "FileDescription",  "FPSC Tools\0"
+            VALUE "FileVersion",      "1.0.0.0\0"
+            VALUE "InternalName",     "FPSC_Tools\0"
+            VALUE "LegalCopyright",   "Ivan Klenov (aka Navy LiK) / Madness Studio\0"
+            VALUE "OriginalFilename", "FPSC_Tools.exe\0"
+            VALUE "ProductName",      "FPSC Tools\0"
+            VALUE "ProductVersion",   "1.0.0 beta\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
+
